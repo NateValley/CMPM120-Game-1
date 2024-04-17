@@ -1,58 +1,413 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "You are a bug.",
+    "Credits": "Thanks for playing!<br><br> Game created by Nathaniel Valdenor (nvaldeno@ucsc.edu) for CMPM 120. StoryGraphTool Created by Adam Smith (amsmith@ucsc.edu).",
+    "InitialLocation": "Center_Entry",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        
+        "_CENTER_":                                                                        {},
+        
+        "Center_Entry": {
+            "Body": "You are a bug.<br><br>It is raining, and you are surrounded by towering trees and ferns.<br><br>Where will you go?<br><br>",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
-                }
-            ]
-        },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": "To your left",
+                    "Target": "Soil_Entry"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
-                }
-            ]
-        },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Porter"
+                    "Text": "To your right",
+                    "Target": "Water_Entry"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Oakes"
-                }
-            ]
-        },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
-            "Choices": [
-                {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": "Forward",
+                    "Target": "Leaves_Entry"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": "Behind",
+                    "Target": "Rocks_Entry"
+                },
+                {
+                    "Text": "What's around?",
+                    "Target": "Center"
                 }
             ]
         },
-        "Beyond": {
+        "Center": {
+            "Body": "Around you are sights and sounds in different directions.<br><br>What stands out to you most are: A patch of moist soil, a stagnant body of water, the sounds of crunching leaves, and an area of giant rocks.<br><br>Where will you go?<br><br>",
+            "Choices": [
+                {
+                    "Text": "Moist Soil",
+                    "Target": "Soil_Entry"
+                },
+                {
+                    "Text": "Body of Water",
+                    "Target": "Water_Entry"
+                },
+                {
+                    "Text": "Sound of Leaves",
+                    "Target": "Leaves_Entry"
+                },
+                {
+                    "Text": "Giant Rocks",
+                    "Target": "Rocks_Entry"
+                }
+            ]
+        },
+        "Center_Back": {
+            "Body": "You walk back to where you started...<br><br>",
+            "Choices": [
+                {
+                    "Text": "...",
+                    "Target": "Center"
+                }
+            ]
+        },
+        
+        "_SOIL_":                                                                        {},
+        
+        "Soil_Entry": {
+            "Body": "You walk over towards soil that looks damp. You see squirming in different areas of the dirt.<br><br>What will you do?<br><br>",
+            "Choices": [
+                {
+                    "Text": "Go Back",
+                    "Target": "Center"
+                },
+                {
+                    "Text": "Inspect Dirt",
+                    "Target": "Soil_Closer"
+                }
+            ]
+        },
+        "Soil_Closer": {
+            "Body": "You come closer to the shuffling dirt...<br><br>",
+            "Choices": [
+                {
+                    "Text": "...",
+                    "Target": "Worm_Entry"
+                }
+            ]
+        },
+
+        "_WORM_":                                                                        {},
+
+        "Worm_Entry": {
+            "Body": "A large, greenish blue mass of flesh emerges from the soil before you!<br><br>As it towers over you, the gloss of its skin travels up and down its long, cylindrical body in a wave-like motion.<br><br>",
+            "Choices": [
+                {
+                    "Text": "AHHHHH!",
+                    "Target": "Worm_Hello"
+                }
+            ]
+        },
+        "Worm_Hello": {
+            "Body": "\"HELLO...\" the baritone voice speaks, skies above you.<br><br>What do you do?<br><br>",
+            "Choices": [
+                {
+                    "Text": "RUN !!!!",
+                    "Target": "Worm_Run"
+                },
+                {
+                    "Text": "Walk closer...",
+                    "Target": "Worm_Begin"
+                }
+            ]
+        },
+        "Worm_Run": {
+            "Body": "You run away from the behemoth of a creature, back to where you started...<br><br>",
+            "Choices": [
+                {
+                    "Text": "Phew...",
+                    "Target": "Center"
+                }
+            ]
+        },
+        "Worm_Begin": {
+            "Body": "\"AH, THERE YOU ARE... I THOUGHT I FELT SOMETHING MOVING...\"<br><br>What will you say?<br><br>",
+            "Choices": [
+                {
+                    "Text": "\"You're huge...\"",
+                    "Target": "Worm_Giant"
+                },
+                {
+                    "Text": "\"What are you doing?\"",
+                    "Target": "Worm_Doing"
+                },
+                {
+                    "Text": "\"I'm gonna go!\"",
+                    "Target": "Worm_Leave"
+                }
+            ]
+        },
+        "Worm_Giant": {
+            "Body": "\"HAHA... I AM A GIANT WORM AFTER ALL... AND YOU ARE A BUG.\"<br><br>What will you say?<br><br>",
+            "Choices": [
+                {
+                    "Text": "\"What are you doing?\"",
+                    "Target": "Worm_Doing"
+                },
+                {
+                    "Text": "\"I'm gonna go!\"",
+                    "Target": "Worm_Leave"
+                }
+            ]
+        },
+        "Worm_Doing": {
+            "Body": "\"I AM DIGGING... IT’S ALL I WANT TO DO.\"<br><br>What will you say?<br><br>",
+            "Choices": [
+                {
+                    "Text": "\"Why?\"",
+                    "Target": "Worm_Why"
+                },
+                {
+                    "Text": "\"Could you teach me how?\"",
+                    "Target": "Worm_Teach"
+                },
+                {
+                    "Text": "\"I'm gonna go!\"",
+                    "Target": "Worm_Leave"
+                }
+            ]
+        },
+        "Worm_Teach": {
+            "Body": "\"OF COURSE!\"<br><br>The relatively ginormous worm then goes into the mechanisms of burrowing and squirming in the dirt efficiently...<br><br>",
+            "Choices": [
+                {
+                    "Text": "You’ve gotten better at digging!",
+                    "Target": "Worm_Default"
+                }
+            ]
+        },
+        "Worm_Default": {
+            "Body": "The worm squirms in place, as if its waiting for you to choose your next dialogue option.<br><br>What will you say?<br><br>",
+            "Choices": [
+                {
+                    "Text": "Can we dig together?",
+                    "Target": "Worm_Dig"
+                },
+                {
+                    "Text": "\"I'm gonna go!\"",
+                    "Target": "Worm_Leave"
+                }
+            ]
+        },
+        "Worm_Dig": {
+            "Body": "\"I THOUGHT YOU'D NEVER ASK!\"<br><br>You dig with the monstrously-sized annelid until you can no longer keep up...<br><br>",
+            "Choices": [
+                {
+                    "Text": "You've found a clump of compost!",
+                    "Target": "Worm_Compost"
+                }
+            ]
+        },
+        "Worm_Compost": {
+            "Body": "\"OOH... MY FRIENDS AND I LOVE THAT STUFF! WE ALWAYS SHOW UP WHEN THAT STUFF IS AROUND...\"<br><br>",
+            "Choices": [
+                {
+                    "Text": "Interesting...",
+                    "Target": "Worm_Default"
+                }
+            ]
+        },
+        "Worm_Why": {
+            "Body": "\"I LOVE FINDING THINGS... PLUS I LITERALLY EAT DIRT.\"<br><br>What will you say?<br><br>",
+            "Choices": [
+                {
+                    "Text": "\"What do you typically find?\"",
+                    "Target": "Worm_Find"
+                },
+                {
+                    "Text": "\"Could you teach me how?\"",
+                    "Target": "Worm_Teach"
+                },
+                {
+                    "Text": "\"I'm gonna go!\"",
+                    "Target": "Worm_Leave"
+                }
+            ]
+        },
+        "Worm_Find": {
+            "Body": "\"I FIND THINGS LIKE PLANT DEBRIS...<br><br>AND, WELL... DIRT.\"<br><br>What will you say?<br><br>",
+            "Choices": [
+                {
+                    "Text": "\"Neat!\"",
+                    "Target": "Worm_Thanks"
+                },
+                {
+                    "Text": "\"I'm gonna go!\"",
+                    "Target": "Worm_Leave"
+                }
+            ]
+        },
+        "Worm_Thanks": {
+            "Body": "\"HAHAHA... THANKS.\"<br><br>What will you say?<br><br>",
+            "Choices": [
+                {
+                    "Text": "I wonder if that could help me...",
+                    "Target": "Worm_Default"
+                },
+                {
+                    "Text": "\"I'm gonna go!\"",
+                    "Target": "Worm_Leave"
+                }
+            ]
+        },
+        "Worm_Leave": {
+            "Body": "\"OKAY! GOOD LUCK OUT THERE BUG.\"<br><br>",
+            "Choices": [
+                {
+                    "Text": "\"Bye big worm!\"",
+                    "Target": "Center_Back"
+                }
+            ]
+        },
+
+        "_WATER_":                                                                  {},
+        
+        "Water_Entry": {
+            "Body": "You walk towards the large body of water.<br><br>There are antennae poking out of the surface near the edge of the water!<br><br>What will you do?",
+            "Choices": [
+                {
+                    "Text": "Go Back",
+                    "Target": "Center_Back"
+                },
+                {
+                    "Text": "Inspect Water",
+                    "Target": "Water_Inspect"
+                }
+            ]
+        },
+        "Water_Inspect": {
+            "Body": "Before you stands a stagnant body of water. The water ripples as each raindrop hits the surface of the freshwater.<br><br>What will you do?<br><br>",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Center_Back"
+                }
+            ]
+        },
+
+        "_PRAWN_":                                                                                          {},
+
+        "_LEAVES_":                                                                                         {},
+                
+        "Leaves_Entry": {
+            "Body": "You head in the direction of the crunching leaves.<br><br>",
+            "Choices": [
+                {
+                    "Text": "...",
+                    "Target": "Leaves_Step"
+                }
+            ]
+        },
+        "Leaves_Step": {
+            "Body": "You step onto the leaf litter, making quite the ruckus with the twigs and dried out leaves under your tiny feet.<br><br>",
+            "Choices": [
+                {
+                    "Text": "...",
+                    "Target": "Centipede_Entry"
+                }
+            ]
+        },
+        
+        "_CENTIPEDE_":                                                                      {},
+        
+        "Centipede_Entry": {
+            "Body": "\"WHO'S THERE...\"<br><br>You hear a clutter of steps on crunching leaves headed towards your direction... and they don't sound so friendly!<br><br>What will you do?!<br><br>",
+            "Choices": [
+                {
+                    "Text": "RUN !!!!",
+                    "Target": "Centipede_Run"
+                }
+            ]
+        },
+        "Centipede_Run": {
+            "Body": "You run away from the hundreds of footsteps hunting you down... back to where you started...<br><br>",
+            "Choices": [
+                {
+                    "Text": "Phew...",
+                    "Target": "Center"
+                }
+            ]
+        },
+        "Centipede_Entry2": {
+            "Body": "",
+            "Choices": [
+                {
+                    "Text": "Throw Clump of Compost!",
+                    "Target": "Centipede_Compost"
+                }
+            ]
+        },
+        "Centipede_Compost": {
+            "Body": "The ground rumbles as you see mounds of dirt being pushed left and right towards your direction...<br><br>Right under your feet and past the centipede!<br><br>",
+            "Choices": [
+                {
+                    "Text": "...",
+                    "Target": "Centipede_Compost2"
+                }
+            ]
+        },
+        "Centipede_Compost2": {
+            "Body": "\"COME BACK HERE! I CAN HEAR YOU!\"<br><br>The sound of hundreds of feet on crunchy leaves fade into the distance as they follow the rumbling of the ground moving away from you...<br><br>Phew... What are you going to do now?<br><br>",
+            "Choices": [
+                {
+                    "Text": "Dig around",
+                    "Target": "Burrows_Dig"
+                },
+                {
+                    "Text": "Turn back",
+                    "Target": "Center_Back"
+                }
+            ]
+        },
+
+        "_ROCKS_":                                                                  {},
+        
+        "Rocks_Entry": {
+            "Body": "As you venture towards the rocks, you notice they're getting much larger than you anticipated...<br><br>What will you do?",
+            "Choices": [
+                {
+                    "Text": "Go Back",
+                    "Target": "Center_Back"
+                },
+                {
+                    "Text": "Inspect Rocks",
+                    "Target": "Rocks_Inspect"
+                }
+            ]
+        },
+        "Rocks_Inspect": {
+            "Body": "Standing before you are rocks much larger than yourself.<br><br>What will you do?<br><br>",
+            "Choices": [
+                {
+                    "Text": "Go back",
+                    "Target": "Center_Back"
+                }
+            ]
+        },
+        
+        "_SCORPION_":                                                                               {},
+
+        "Scorpion": {
             "Body": "Grass, don't forget to check for ticks!"
+        },
+
+        "_BURROWS_":                                                                  {},
+       
+        "Burrows_Dig": {
+            "Body": "You dig around to find a network of tunnels, and you can smell an alluring scent!<br><br> What will you do?",
+            "Choices": [
+                {
+                    "Text": "Venture ahead!",
+                    "Target": "Burrows_End"
+                },
+                {
+                    "Text": "Turn back",
+                    "Target": "Center_Back"
+                }
+            ]
+        },
+        "Burrows_End": {
+            "Body": "You dig around to find a network of tunnels, and you can smell an alluring scent!<br><br>You continue ahead in search for answers...<br><br>"
         }
     }
 }
